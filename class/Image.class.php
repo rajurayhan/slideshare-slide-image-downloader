@@ -37,9 +37,7 @@
 
 		public function addWaterMark($imageFile,  $file_name, $folder)
 		{
-			$watermark 	= Image::make('storage/watermark.png');
-
-			$name 		= 'watermarked_'.uniqid().'.png';
+			$watermark 	= Image::make('storage/new_institute_logo.png'); 
 
 			$img            = Image::make($imageFile);
             $img->insert($watermark, 'bottom-right',10,10);
@@ -52,7 +50,7 @@
             unlink($imageFile);
 
 			// echo "<img src='storage/water/".$name."'>";
-			return $name;
+			return $file_name;
 		}
 	}
 ?>
