@@ -16,7 +16,7 @@
 
 		
 		public function grabImage($image_url, $image_file, $file_name, $folder){
-			$path 		= 'storage/downloads/'.$folder;
+			$path 		= 'downloads/'.$folder;
 
 			if (!file_exists($path)) {
 				mkdir($path, 0777, true);
@@ -47,7 +47,7 @@
 
 		public function addWaterMark($imageFile,  $filePath)
 		{
-			$watermark 	= Image::make('watermarks/new_institute_logo.png'); 
+			$watermark 	= Image::make('watermarks/logo_new.png'); 
 
 			$img = Image::make($imageFile);
             $img->insert($watermark, 'bottom-right',10,10); 

@@ -12,7 +12,7 @@
 	foreach($sources as $index => $sourceArray){
 		foreach ($sourceArray as $key => $source) {
 			$fileParts = pathinfo($source); 
-			$image = $imgObj->grabImage($source, 'storage/'.$fileParts['basename'] , $fileParts['basename'], $index);
+			$image = $imgObj->grabImage($source, 'downloads/'.$fileParts['basename'] , $fileParts['basename'], $index);
                   echo "<img src='".$image."'>" . "<br>";
 		}
 	}
